@@ -4,15 +4,15 @@ SetKeyDelay, 50  ; Set the delay between key presses (in milliseconds)
 ; Initialize variables
 cycleIndex := 1
 
+
 ; Define the hotkey for pressing g
-f::f
 g::
     ; Press and hold h for half a second
     SendInput, {h down}
     Sleep, 97
     SendInput, {h up}
 
-    ; Cycle through r, t, and y
+    ; Cycle through r, t, and y (Siren)
     if (cycleIndex = 1) {
         SendInput, {r down}{r up}
         cycleIndex := 2
