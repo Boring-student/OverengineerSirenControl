@@ -56,12 +56,15 @@ return
         ; Cycle through r, t, and y
         if (cycleIndex = 2) {
             SendInput, {r down}{r up}
+			cycleIndex := 1
         }
         else if (cycleIndex = 3) {
             SendInput, {t down}{t up}
+			cycleIndex := 1
         }
         else if (cycleIndex = 1) {
             SendInput, {y down}{y up}
+			cycleIndex := 1
         }
     }
     else {
@@ -83,3 +86,4 @@ F10::
 		HideTrayTip()
 		}
 return
+
