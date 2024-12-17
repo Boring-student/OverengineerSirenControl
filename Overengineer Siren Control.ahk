@@ -1,4 +1,4 @@
-﻿#Persistent  ; Keep the script running
+#Persistent  ; Keep the script running
 SetKeyDelay, 50  ; Set the delay between key presses (in milliseconds)
 
 ; Initialize variables
@@ -14,8 +14,8 @@ HideTrayTip() {
     }
 }
 
-; Define the hotkey for pressing g
-g::
+; Define the hotkey for pressing Left ALT
+LAlt::
     if (cycleMode) {
         ; Press and hold h for 110 milliseconds
         SendInput, {h down}
@@ -41,8 +41,8 @@ g::
     }
 return
 
-; Define the hotkey for pressing Shift + G
-+g::
+; Define the hotkey for pressing Shift + Left ALT
++LAlt::
     if (cycleMode) {
         ; Press and hold h for 110 milliseconds
         SendInput, {h down}
