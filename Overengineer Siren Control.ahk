@@ -14,12 +14,12 @@ HideTrayTip() {
     }
 }
 
-; Define the hotkey for pressing Left ALT
-LAlt::
+; Define the hotkey for pressing CapsLock
+CapsLock::
     if (cycleMode) {
-        ; Press and hold h for 110 milliseconds
+        ; Press and hold h for 120 milliseconds
         SendInput, {h down}
-        Sleep, 110
+        Sleep, 120
         SendInput, {h up}
 
         ; Cycle through r, t, and y
@@ -37,20 +37,20 @@ LAlt::
         }
     }
     else {
-        g::g  ; Send 'g' as a normal typeable key
+        CapsLock::CapsLock  ; Send 'CapsLock' as a normal typeable key
     }
 return
 
-; Define the hotkey for pressing Shift + Left ALT
-+LAlt::
+; Define the hotkey for pressing Shift + CapsLock
++CapsLock::
     if (cycleMode) {
-        ; Press and hold h for 110 milliseconds
+        ; Press and hold h for 120 milliseconds
         SendInput, {h down}
-        Sleep, 110
+        Sleep, 120
         SendInput, {h up}
-		Sleep, 50
+		Sleep, 55
 		SendInput, {h down}
-        Sleep, 110
+        Sleep, 120
         SendInput, {h up}
 
         ; Cycle through r, t, and y
@@ -68,7 +68,7 @@ return
         }
     }
     else {
-        +g::+g  ; Send 'Shift + G' as a normal typeable key
+        +CapsLock::+CapsLock  ; Send 'Shift + CapsLock' as a normal typeable key
     }
 return
 
